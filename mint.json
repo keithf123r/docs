@@ -7,12 +7,12 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#929394",
+    "light": "#F6F5F5",
+    "dark": "#929394",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#929394",
+      "to": "#929394"
     }
   },
   "topbarLinks": [
@@ -22,25 +22,14 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://alice.11x.ai/dashboard"
+    "name": "Alice",
+    "url": "https://alice.11x.ai/"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
       "name": "Documentation",
       "icon": "book-open-cover",
       "url": "https://docs.11x.ai"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://11x.ai/community"
     },
     {
       "name": "Blog",
