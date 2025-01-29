@@ -44,6 +44,12 @@
         "introduction",
         "getting-started"
       ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "integrations/salesforce"
+      ]
     }
   ],
   "footerSocials": {

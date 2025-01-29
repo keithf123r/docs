@@ -1,0 +1,175 @@
+---
+title: 'Salesforce Integration'
+description: "Complete guide for setting up and using Alice's Salesforce integration"
+icon: "salesforce"
+---
+
+<Card title="Salesforce Integration" horizontal icon="salesforce" color="#019EDB">
+</Card>
+
+
+<Info>
+  Alice's Salesforce integration enables seamless synchronization of data,
+  streamlined lead management, and powerful automation capabilities to enhance
+  your sales and marketing workflows.
+</Info>
+
+## Quick Start
+
+<Steps>
+  <Step title="Access Dashboard">Log into your Alice dashboard</Step>
+  <Step title="Find Integration">Navigate to Integrations > Salesforce</Step>
+  <Step title="Connect">Click "Connect with Salesforce"</Step>
+  <Step title="Authenticate">
+    Authenticate with your Salesforce credentials
+  </Step>
+  <Step title="Grant Permissions">
+    Grant necessary permissions when prompted
+  </Step>
+  <Step title="Verify">Verify the connection status</Step>
+</Steps>
+
+## Prerequisites
+
+<Warning>
+  These requirements must be met before proceeding with the integration setup.
+</Warning>
+
+- An active Salesforce account with administrator access
+- Alice account with integration permissions
+- API access enabled in your Salesforce organization
+
+## Features and Capabilities
+
+<Tabs>
+  <Tab title="Data Sync">
+    - **Bi-directional Sync**: Changes in either system are automatically reflected in the other
+    - **Real-time Updates**: Modifications are propagated immediately
+    - **Field Mapping**: Customizable field mappings between Alice and Salesforce objects
+  </Tab>
+
+  <Tab title="Lead Management">
+    - **Automatic Creation**: Instant lead creation in Salesforce
+    - **Smart Scoring**: Advanced lead scoring and qualification
+    - **Campaign Tracking**: Seamless campaign association and tracking
+    - **Custom Fields**: Flexible field mapping support
+  </Tab>
+
+  <Tab title="Contact Management">
+    - **Sync Engine**: Real-time contact synchronization
+    - **Activity Tracking**: Comprehensive activity history
+    - **Preference Management**: Communication preferences sync
+    - **Relationship Mapping**: Advanced relationship visualization
+  </Tab>
+
+  <Tab title="Automation">
+    - **Smart Triggers**: Sophisticated trigger-based actions
+    - **Custom Workflows**: Flexible workflow rules
+    - **Task Automation**: Automated task creation and management
+    - **Status Sync**: Real-time status updates synchronization
+  </Tab>
+</Tabs>
+
+## Common Use Cases
+
+### Lead Generation and Nurturing
+
+```json
+{
+  "leadFlow": {
+    "capture": "alice_forms",
+    "autoCreate": true,
+    "syncFields": ["email", "name", "company"],
+    "scoring": {
+      "enabled": true,
+      "threshold": 50
+    }
+  }
+}
+```
+
+<Steps>
+  <Step title="Capture">Capture leads through Alice</Step>
+  <Step title="Sync">Automatically create/update leads in Salesforce</Step>
+  <Step title="Track">Track engagement and activities</Step>
+  <Step title="Score">Score and qualify leads based on behavior</Step>
+</Steps>
+
+### Sales Pipeline Management
+
+<Info>
+  Efficiently manage your sales pipeline with real-time visibility and automated
+  updates.
+</Info>
+
+<Steps>
+  <Step title="View">View and manage opportunities</Step>
+  <Step title="Track">Track deal progress</Step>
+  <Step title="Update">Update deal stages</Step>
+  <Step title="Monitor">Monitor sales activities</Step>
+</Steps>
+
+### Campaign Management
+
+<Tabs>
+  <Tab title="Creation">
+    - Design campaign structure - Set up tracking parameters - Configure
+    automation rules
+  </Tab>
+
+  <Tab title="Tracking">
+    - Monitor engagement metrics - Track conversion rates - Analyze campaign
+    performance
+  </Tab>
+
+  <Tab title="Optimization">
+    - Adjust based on metrics - Refine targeting - Optimize messaging
+  </Tab>
+</Tabs>
+
+## Best Practices
+
+### Data Management
+
+<Warning>
+  Following these practices ensures data integrity and optimal integration
+  performance.
+</Warning>
+
+- Regularly audit field mappings
+- Maintain consistent data formats
+- Clean data before initial sync
+- Monitor sync logs for errors
+
+### Security
+
+<Note>
+  Security is crucial for protecting sensitive customer data and maintaining
+  compliance.
+</Note>
+
+- Review permission settings regularly
+- Implement role-based access control
+- Monitor integration activity logs
+- Follow security compliance guidelines
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+<Tabs>
+  <Tab title="Sync Issues">
+    <Warning>Problem: Data not syncing</Warning>- Check connection status -
+    Verify API access - Review field mappings - Check for validation rules
+  </Tab>
+
+  <Tab title="Authentication">
+    <Warning>Problem: Connection failures</Warning>- Verify credentials - Check
+    API permissions - Confirm OAuth settings - Review security tokens
+  </Tab>
+
+  <Tab title="Data Issues">
+    <Warning>Problem: Mismatched data</Warning>- Audit field mappings - Check
+    transformation rules - Verify data types - Review sync logs
+  </Tab>
+</Tabs>
