@@ -5,171 +5,261 @@ icon: "salesforce"
 ---
 
 <Card title="Salesforce Integration" horizontal icon="salesforce" color="#019EDB">
+  Alice's Salesforce integration enables bidirectional data flow between
+  platforms, automating key sales and outreach processes while maintaining
+  consistent customer data.
 </Card>
 
+## Getting Started
 
-<Info>
-  Alice's Salesforce integration enables seamless synchronization of data,
-  streamlined lead management, and powerful automation capabilities to enhance
-  your sales and marketing workflows.
-</Info>
+### Prerequisites
 
-## Quick Start
+Before setting up the Salesforce integration, ensure you have:
 
 <Steps>
-  <Step title="Access Dashboard">Log into your Alice dashboard</Step>
-  <Step title="Find Integration">Navigate to Integrations > Salesforce</Step>
-  <Step title="Connect">Click "Connect with Salesforce"</Step>
-  <Step title="Authenticate">
-    Authenticate with your Salesforce credentials
-  </Step>
-  <Step title="Grant Permissions">
-    Grant necessary permissions when prompted
-  </Step>
-  <Step title="Verify">Verify the connection status</Step>
-</Steps>
+  ### Salesforce Account Requirements
+  - A Salesforce organization with API access enabled
+  - Administrator or System Integrator role
+  - API access enabled in your Salesforce edition
 
-## Prerequisites
+### Permission Setup
 
-<Warning>
-  These requirements must be met before proceeding with the integration setup.
-</Warning>
+- Appropriate user permissions configured
+- API enabled user profile
+- Required object permissions (Lead, Contact, Account, Opportunity)
+  </Steps>
 
-- An active Salesforce account with administrator access
-- Alice account with integration permissions
-- API access enabled in your Salesforce organization
-
-## Features and Capabilities
-
-<Tabs>
-  <Tab title="Data Sync">
-    - **Bi-directional Sync**: Changes in either system are automatically reflected in the other
-    - **Real-time Updates**: Modifications are propagated immediately
-    - **Field Mapping**: Customizable field mappings between Alice and Salesforce objects
-  </Tab>
-
-  <Tab title="Lead Management">
-    - **Automatic Creation**: Instant lead creation in Salesforce
-    - **Smart Scoring**: Advanced lead scoring and qualification
-    - **Campaign Tracking**: Seamless campaign association and tracking
-    - **Custom Fields**: Flexible field mapping support
-  </Tab>
-
-  <Tab title="Contact Management">
-    - **Sync Engine**: Real-time contact synchronization
-    - **Activity Tracking**: Comprehensive activity history
-    - **Preference Management**: Communication preferences sync
-    - **Relationship Mapping**: Advanced relationship visualization
-  </Tab>
-
-  <Tab title="Automation">
-    - **Smart Triggers**: Sophisticated trigger-based actions
-    - **Custom Workflows**: Flexible workflow rules
-    - **Task Automation**: Automated task creation and management
-    - **Status Sync**: Real-time status updates synchronization
-  </Tab>
-</Tabs>
-
-## Common Use Cases
-
-### Lead Generation and Nurturing
-
-```json
-{
-  "leadFlow": {
-    "capture": "alice_forms",
-    "autoCreate": true,
-    "syncFields": ["email", "name", "company"],
-    "scoring": {
-      "enabled": true,
-      "threshold": 50
-    }
-  }
-}
-```
+### Quick Setup
 
 <Steps>
-  <Step title="Capture">Capture leads through Alice</Step>
-  <Step title="Sync">Automatically create/update leads in Salesforce</Step>
-  <Step title="Track">Track engagement and activities</Step>
-  <Step title="Score">Score and qualify leads based on behavior</Step>
+  ### Access Integration Settings
+  Navigate to Settings > Integrations in your Alice dashboard
+
+### Connect Salesforce
+
+Click "Connect Salesforce" and authorize the connection
+
+### Configure Sync Settings
+
+Select the objects and fields you want to sync
+
 </Steps>
 
-### Sales Pipeline Management
+## Features
 
-<Info>
-  Efficiently manage your sales pipeline with real-time visibility and automated
-  updates.
-</Info>
+### Supported Objects
 
-<Steps>
-  <Step title="View">View and manage opportunities</Step>
-  <Step title="Track">Track deal progress</Step>
-  <Step title="Update">Update deal stages</Step>
-  <Step title="Monitor">Monitor sales activities</Step>
-</Steps>
+<Card>
+  #### Leads - Automatic lead creation and updates - Real-time engagement
+  tracking - Lead scoring synchronization
+</Card>
 
-### Campaign Management
+<Card>
+  #### Contacts - Bidirectional contact sync - Engagement history tracking -
+  Automatic field updates - Core fields supported: - Email - First Name - Last
+  Name - Title - LinkedIn URL - Custom field mapping
+</Card>
 
-<Tabs>
-  <Tab title="Creation">
-    - Design campaign structure - Set up tracking parameters - Configure
-    automation rules
-  </Tab>
+<Card>
+  #### Accounts - Company data synchronization - Contact relationship management
+  - Account-level engagement tracking - Core fields supported: - Company Name -
+  Domain - Website URL - Related contacts
+</Card>
 
-  <Tab title="Tracking">
-    - Monitor engagement metrics - Track conversion rates - Analyze campaign
-    performance
-  </Tab>
+<Card>
+  #### Opportunities - Pipeline progress tracking - Stage updates - Revenue data
+  sync
+</Card>
 
-  <Tab title="Optimization">
-    - Adjust based on metrics - Refine targeting - Optimize messaging
-  </Tab>
-</Tabs>
+## Use Cases
+
+### Sales Development
+
+<Callout type="success">
+  **Perfect for SDR teams running outreach campaigns**
+
+Transform your sales development process with automated lead management and engagement tracking.
+
+</Callout>
+
+#### Key Features
+
+- Automatic lead creation from Alice prospects
+- Real-time engagement updates
+- Meeting booking synchronization
+- Complete activity history
+
+#### Benefits
+
+- Eliminated manual data entry
+- Real-time status updates
+- Full visibility of outreach activities
+- Accurate campaign reporting
+
+### Account-Based Marketing
+
+<Callout type="success">
+  **Ideal for marketing teams running targeted campaigns**
+
+Streamline your ABM efforts with synchronized account data and engagement tracking.
+
+</Callout>
+
+#### Workflow
+
+1. Import target accounts from Salesforce
+2. Enrich account data automatically
+3. Track engagement across platforms
+4. Update account scoring in real-time
+
+#### Benefits
+
+- Unified engagement tracking
+- Automated prioritization
+- Enhanced sales-marketing alignment
+- Data-driven targeting
+
+### Customer Expansion
+
+<Callout type="success">
+  **Empower customer success teams to identify opportunities**
+
+Drive growth with synchronized customer data and automated opportunity identification.
+
+</Callout>
+
+#### Features
+
+- Customer data synchronization
+- Product usage tracking
+- Automated opportunity detection
+- Cross-team coordination
+
+#### Benefits
+
+- Proactive opportunity identification
+- Coordinated customer communication
+- Data-driven expansion strategies
+- Enhanced customer experience
 
 ## Best Practices
 
 ### Data Management
 
-<Warning>
-  Following these practices ensures data integrity and optimal integration
-  performance.
-</Warning>
+<Callout type="warning">
+  Follow these guidelines to maintain high-quality data across both systems.
+</Callout>
 
-- Regularly audit field mappings
-- Maintain consistent data formats
-- Clean data before initial sync
-- Monitor sync logs for errors
+- Maintain consistent email formats
+- Standardize company domain naming
+- Keep required fields populated
+- Regular data quality audits
 
-### Security
+### Process Optimization
 
-<Note>
-  Security is crucial for protecting sensitive customer data and maintaining
-  compliance.
-</Note>
+<Callout type="info">Optimize your workflows for maximum efficiency.</Callout>
 
-- Review permission settings regularly
-- Implement role-based access control
-- Monitor integration activity logs
-- Follow security compliance guidelines
+- Configure lead assignment rules
+- Set up automated task creation
+- Utilize custom fields effectively
+- Regular process reviews
+
+### Team Collaboration
+
+<Callout type="info">Ensure smooth cross-team operations.</Callout>
+
+- Define clear ownership rules
+- Standardize status definitions
+- Create shared dashboards
+- Regular sync meetings
 
 ## Troubleshooting
 
-### Common Issues and Solutions
+### Common Issues
 
-<Tabs>
-  <Tab title="Sync Issues">
-    <Warning>Problem: Data not syncing</Warning>- Check connection status -
-    Verify API access - Review field mappings - Check for validation rules
-  </Tab>
+<Callout type="error">
+  If you encounter sync issues, follow these steps:
+</Callout>
 
-  <Tab title="Authentication">
-    <Warning>Problem: Connection failures</Warning>- Verify credentials - Check
-    API permissions - Confirm OAuth settings - Review security tokens
-  </Tab>
+<Steps>
+  ### Check Connection Status
+  Verify your Salesforce connection is active
 
-  <Tab title="Data Issues">
-    <Warning>Problem: Mismatched data</Warning>- Audit field mappings - Check
-    transformation rules - Verify data types - Review sync logs
-  </Tab>
-</Tabs>
+### Review Field Mappings
+
+Ensure all required fields are properly mapped
+
+### Validate Permissions
+
+Confirm appropriate access levels are set
+
+### Contact Support
+
+If issues persist, reach out to our support team
+
+</Steps>
+
+### Data Discrepancies
+
+<Steps>
+  ### Review Sync Settings
+  Check your synchronization configuration
+
+### Verify Field Mappings
+
+Ensure fields are correctly mapped
+
+### Check Deduplication Rules
+
+Review duplicate handling settings
+
+### Run Manual Sync
+
+Force a manual sync if needed
+
+</Steps>
+
+## Security & Compliance
+
+<Callout type="warning">
+  Your data security is our priority. Our integration follows enterprise-grade
+  security standards.
+</Callout>
+
+### Security Features
+
+- End-to-end encryption
+- Secure data transmission
+- Regular security audits
+- Compliance certifications
+
+### Access Controls
+
+- Role-based permissions
+- Field-level security
+- Detailed audit logging
+- User authentication
+
+## Known Limitations
+
+<Callout type="warning">
+  Be aware of these limitations when using the integration.
+</Callout>
+
+### Sync Timing
+
+- Updates propagate within minutes
+- Large datasets may require more time
+- Batch operations for efficiency
+
+### Field Support
+
+- Custom field mapping required
+- Read-only system fields
+- Formula field limitations
+
+### Data Volume
+
+- API usage limits apply
+- Throttling on bulk operations
+- Best practices recommended for large datasets
