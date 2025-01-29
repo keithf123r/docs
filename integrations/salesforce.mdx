@@ -33,17 +33,26 @@ A Salesforce organization with API access enabled
 ### Quick Setup
 
 <Steps>
-  ### Access Integration Settings
-  Navigate to Settings > Integrations in your Alice dashboard
+  <Step title="Access Integration Settings">
+    Navigate to Settings > Integrations > CRM in Alice
+    <Frame>
+    <img src="/platformCaptures/01-crm-provider-selection.png" alt="CRM Provider Selection" />
+    </Frame>
+  </Step>
+  
+  <Step title="Connect Salesforce">
+    Click "Connect Salesforce" and authorize the connection
+    <Frame>
+    <img src="/platformCaptures/02-crm-authorization.png" alt="Salesforce Authorization" />
+    </Frame>
+  </Step>
 
-### Connect Salesforce
-
-Click "Connect Salesforce" and authorize the connection
-
-### Configure Sync Settings
-
-Select the objects and fields you want to sync
-
+  <Step title="Configure Sync Settings">
+    Select the objects and fields you want to sync
+    <Frame>
+    <img src="/platformCaptures/03-field-mapping-configuration.png" alt="Field Mapping Configuration" />
+    </Frame>
+  </Step>
 </Steps>
 
 ## Features
@@ -53,74 +62,40 @@ Select the objects and fields you want to sync
 <Card>
   #### Leads - Automatic lead creation and updates - Real-time engagement
   tracking - Lead scoring synchronization
+  
+  <Frame>
+    <img src="/platformCaptures/07-lead-management-config.png" alt="Lead Management Configuration" />
+  </Frame>
 </Card>
 
 <Card>
   #### Contacts - Bidirectional contact sync - Engagement history tracking -
   Automatic field updates - Core fields supported: - Email - First Name - Last
   Name - Title - LinkedIn URL - Custom field mapping
+  
+  <Frame>
+    <img src="/platformCaptures/05-contact-sync-settings.png" alt="Contact Sync Settings" />
+  </Frame>
 </Card>
 
 <Card>
   #### Accounts - Company data synchronization - Contact relationship management
   - Account-level engagement tracking - Core fields supported: - Company Name -
   Domain - Website URL - Related contacts
+  
+  <Frame>
+    <img src="/platformCaptures/04-account-field-mapping.png" alt="Account Field Mapping" />
+  </Frame>
 </Card>
 
 <Card>
   #### Opportunities - Pipeline progress tracking - Stage updates - Revenue data
   sync
+  
+  <Frame>
+    <img src="/platformCaptures/09-opportunity-tracking-setup.png" alt="Opportunity Tracking Setup" />
+  </Frame>
 </Card>
-
-## Use Cases
-
-### Sales Development
-
-<Callout type="success">
-  **Perfect for SDR teams running outreach campaigns**
-
-Transform your sales development process with automated lead management and engagement tracking.
-
-</Callout>
-
-#### Key Features
-
-- Automatic lead creation from Alice prospects
-- Real-time engagement updates
-- Meeting booking synchronization
-- Complete activity history
-
-#### Benefits
-
-- Eliminated manual data entry
-- Real-time status updates
-- Full visibility of outreach activities
-- Accurate campaign reporting
-
-### Account-Based Marketing
-
-<Callout type="success">
-  **Ideal for marketing teams running targeted campaigns**
-
-Streamline your ABM efforts with synchronized account data and engagement tracking.
-
-</Callout>
-
-#### Workflow
-
-1. Import target accounts from Salesforce
-2. Enrich account data automatically
-3. Track engagement across platforms
-4. Update account scoring in real-time
-
-#### Benefits
-
-- Unified engagement tracking
-- Automated prioritization
-- Enhanced sales-marketing alignment
-- Data-driven targeting
-
-### Customer Expansion
 
 <Callout type="success">
   **Empower customer success teams to identify opportunities**
@@ -151,6 +126,10 @@ Drive growth with synchronized customer data and automated opportunity identific
   Follow these guidelines to maintain high-quality data across both systems.
 </Callout>
 
+<Frame>
+  <img src="/platformCaptures/06-data-validation-rules.png" alt="Data Validation Rules" />
+</Frame>
+
 - Maintain consistent email formats
 - Standardize company domain naming
 - Keep required fields populated
@@ -178,89 +157,20 @@ Drive growth with synchronized customer data and automated opportunity identific
 
 ### Common Issues
 
-<Callout type="error">
-  If you encounter sync issues, follow these steps:
-</Callout>
+<AccordionGroup>
+  <Accordion title="Salesforce disconnected">
+    Verify your Salesforce connection is active
+  </Accordion>
+  
+  <Accordion title="Leads are not deduplicating">
+    Check your deduplication rules
+  </Accordion>
 
-<Steps>
-  ### Check Connection Status
-  Verify your Salesforce connection is active
+  <Accordion title="Data is not pushed to correct objects or fields">
+    Review field mappings and ensure they are correctly mapped
+  </Accordion>
 
-### Review Field Mappings
-
-Ensure all required fields are properly mapped
-
-### Validate Permissions
-
-Confirm appropriate access levels are set
-
-### Contact Support
-
-If issues persist, reach out to our support team
-
-</Steps>
-
-### Data Discrepancies
-
-<Steps>
-  ### Review Sync Settings
-  Check your synchronization configuration
-
-### Verify Field Mappings
-
-Ensure fields are correctly mapped
-
-### Check Deduplication Rules
-
-Review duplicate handling settings
-
-### Run Manual Sync
-
-Force a manual sync if needed
-
-</Steps>
-
-## Security & Compliance
-
-<Callout type="warning">
-  Your data security is our priority. Our integration follows enterprise-grade
-  security standards.
-</Callout>
-
-### Security Features
-
-- End-to-end encryption
-- Secure data transmission
-- Regular security audits
-- Compliance certifications
-
-### Access Controls
-
-- Role-based permissions
-- Field-level security
-- Detailed audit logging
-- User authentication
-
-## Known Limitations
-
-<Callout type="warning">
-  Be aware of these limitations when using the integration.
-</Callout>
-
-### Sync Timing
-
-- Updates propagate within minutes
-- Large datasets may require more time
-- Batch operations for efficiency
-
-### Field Support
-
-- Custom field mapping required
-- Read-only system fields
-- Formula field limitations
-
-### Data Volume
-
-- API usage limits apply
-- Throttling on bulk operations
-- Best practices recommended for large datasets
+  <Accordion title="Data discrepancies">
+    Check your synchronization configuration
+  </Accordion>
+</AccordionGroup>
