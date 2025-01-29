@@ -1,0 +1,224 @@
+---
+title: 'CRM Deduplication'
+description: "Complete guide to Alice's CRM deduplication system"
+icon: "layer-group"
+---
+
+<Card title="CRM Deduplication" horizontal icon="layer-group" color="#00A3E0">
+  Alice's CRM deduplication system automatically identifies and manages duplicate records across your CRM integrations,
+  ensuring data consistency and maintaining clean customer data.
+</Card>
+
+## Overview
+
+CRM deduplication is a critical process that helps maintain data quality by identifying and managing duplicate records across your CRM systems. Alice's deduplication engine works across all supported CRM integrations, including Salesforce, HubSpot, and Pipedrive.
+
+### Key Benefits
+
+<CardGroup cols={2}>
+<Card title="Data Quality" icon="database">
+  - Prevent duplicate records
+  - Maintain consistent customer data
+  - Reduce manual data cleanup
+</Card>
+
+<Card title="Process Efficiency" icon="gauge-high">
+  - Automated duplicate detection
+  - Smart record merging
+  - Cross-CRM synchronization
+</Card>
+</CardGroup>
+
+## How It Works
+
+### Deduplication Process
+
+<Steps>
+  <Step title="Record Identification">
+    When new records are created or updated, Alice's deduplication engine automatically scans for potential duplicates using multiple matching criteria:
+    - Email address (primary identifier)
+    - Domain name
+    - Company information
+    - Contact details
+  </Step>
+  
+  <Step title="Matching Analysis">
+    The system applies sophisticated matching algorithms to determine duplicate probability:
+    - Exact match detection
+    - Fuzzy matching for similar records
+    - Cross-field validation
+  </Step>
+
+  <Step title="Record Resolution">
+    When duplicates are identified, the system:
+    - Automatically merges records based on configured rules
+    - Preserves the most recent or most complete information
+    - Maintains an audit trail of merged records
+  </Step>
+</Steps>
+
+### Matching Criteria
+
+<AccordionGroup>
+  <Accordion title="Email Address Matching">
+    - Primary identifier for contact records
+    - Case-insensitive comparison
+    - Domain-level validation
+  </Accordion>
+  
+  <Accordion title="Company Matching">
+    - Domain name comparison
+    - Company name fuzzy matching
+    - Industry and location validation
+  </Accordion>
+
+  <Accordion title="Contact Details">
+    - Name comparison (first name + last name)
+    - Phone number standardization
+    - Title and role matching
+  </Accordion>
+</AccordionGroup>
+
+## Configuration
+
+### Deduplication Rules
+
+<Frame>
+  <img src="/platformCaptures/06-data-validation-rules.png" alt="Data Validation Rules" />
+</Frame>
+
+Configure your deduplication rules in Settings > Data Management > Deduplication Rules:
+
+<CardGroup cols={2}>
+<Card title="Basic Rules" icon="gear">
+  - Email matching threshold
+  - Company name similarity
+  - Contact information matching
+</Card>
+
+<Card title="Advanced Settings" icon="sliders">
+  - Custom field matching
+  - Merge field priorities
+  - Automation triggers
+</Card>
+</CardGroup>
+
+### Merge Behavior
+
+<Callout type="info">
+  Define how duplicate records should be handled when detected.
+</Callout>
+
+- **Master Record Selection**
+  - Most recently updated
+  - Most complete record
+  - Custom selection criteria
+
+- **Field Level Merging**
+  - Field value priority
+  - Conflict resolution rules
+  - Custom field handling
+
+## Best Practices
+
+### Data Management
+
+<Callout type="warning">
+  Follow these guidelines to maximize deduplication effectiveness.
+</Callout>
+
+- Standardize data entry processes
+- Regular data quality audits
+- Consistent field formats
+- Clear merge policies
+
+### Process Implementation
+
+1. Start with strict matching rules
+2. Monitor and adjust thresholds
+3. Review merge results regularly
+4. Train team on data entry standards
+
+### Common Scenarios
+
+<AccordionGroup>
+  <Accordion title="Multiple Email Addresses">
+    Handle contacts with multiple email addresses by:
+    - Setting primary email designation
+    - Maintaining email history
+    - Cross-referencing domains
+  </Accordion>
+  
+  <Accordion title="Company Variations">
+    Manage company name variations through:
+    - Domain-based matching
+    - Standardized naming conventions
+    - Subsidiary handling
+  </Accordion>
+
+  <Accordion title="Contact Role Changes">
+    Track contact changes across organizations:
+    - Historical record preservation
+    - Role-based record updates
+    - Timeline maintenance
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+### Common Issues
+
+<AccordionGroup>
+  <Accordion title="Unexpected Duplicates">
+    - Verify matching rules configuration
+    - Check field-level matching criteria
+    - Review recent system changes
+  </Accordion>
+  
+  <Accordion title="Incorrect Merges">
+    - Examine merge rule settings
+    - Check field priority configuration
+    - Review automation triggers
+  </Accordion>
+
+  <Accordion title="Missing Records">
+    - Verify sync status
+    - Check filter criteria
+    - Review deletion policies
+  </Accordion>
+</AccordionGroup>
+
+### Edge Cases
+
+<Callout type="warning">
+  Special scenarios that require attention:
+</Callout>
+
+- Multiple valid duplicates (e.g., different departments)
+- Complex corporate hierarchies
+- International character handling
+- Historical record preservation
+
+## Integration-Specific Notes
+
+### Salesforce
+
+- Uses Salesforce duplicate rules as additional reference
+- Maintains record IDs for reference
+- Preserves Salesforce-specific fields
+
+### HubSpot
+
+- Leverages HubSpot's contact property history
+- Maintains engagement data during merges
+- Preserves HubSpot-specific analytics
+
+### Pipedrive
+
+- Maintains deal associations
+- Preserves activity history
+- Handles organization hierarchies
+
+<Callout type="success">
+  **Best Practice**: Regularly review your deduplication logs and adjust rules as needed to maintain optimal data quality.
+</Callout>
