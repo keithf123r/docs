@@ -15,6 +15,9 @@
       "to": "#CFCCB1"
     }
   },
+  "background": {
+    "style": "gradient"
+  },
   "topbarLinks": [
     {
       "name": "Support",
