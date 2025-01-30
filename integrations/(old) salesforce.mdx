@@ -1,0 +1,176 @@
+---
+title: 'Salesforce Integration'
+description: "Complete guide for setting up and using Alice's Salesforce integration"
+icon: "salesforce"
+---
+
+<Card title="Salesforce Integration" horizontal icon="salesforce" color="#019EDB">
+  Alice's Salesforce integration enables bidirectional data flow between
+  platforms, automating key sales and outreach processes while maintaining
+  consistent customer data.
+</Card>
+
+## Getting Started
+
+### Prerequisites
+
+Before setting up the Salesforce integration, ensure you have:
+
+<CardGroup cols={2}>
+<Card title="Salesforce Account Requirements" icon="computer">
+A Salesforce organization with API access enabled
+  - Administrator or System Integrator role
+  - API access enabled in your Salesforce edition
+</Card>
+
+<Card title="Permission Setup" icon="lock">
+  - Appropriate user permissions configured
+  - API enabled user profile
+  - Required object permissions (Lead, Contact, Account, Opportunity)
+</Card>
+</CardGroup>
+
+### Quick Setup
+
+<Steps>
+  <Step title="Access Integration Settings">
+    Navigate to Settings > Integrations > CRM in Alice
+    <Frame>
+    <img src="/platformCaptures/01-crm-provider-selection.png" alt="CRM Provider Selection" />
+    </Frame>
+  </Step>
+  
+  <Step title="Connect Salesforce">
+    Click "Connect Salesforce" and authorize the connection
+    <Frame>
+    <img src="/platformCaptures/02-crm-authorization.png" alt="Salesforce Authorization" />
+    </Frame>
+  </Step>
+
+  <Step title="Configure Sync Settings">
+    Select the objects and fields you want to sync
+    <Frame>
+    <img src="/platformCaptures/03-field-mapping-configuration.png" alt="Field Mapping Configuration" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Features
+
+### Supported Objects
+
+<Card>
+  #### Leads - Automatic lead creation and updates - Real-time engagement
+  tracking - Lead scoring synchronization
+  
+  <Frame>
+    <img src="/platformCaptures/07-lead-management-config.png" alt="Lead Management Configuration" />
+  </Frame>
+</Card>
+
+<Card>
+  #### Contacts - Bidirectional contact sync - Engagement history tracking -
+  Automatic field updates - Core fields supported: - Email - First Name - Last
+  Name - Title - LinkedIn URL - Custom field mapping
+  
+  <Frame>
+    <img src="/platformCaptures/05-contact-sync-settings.png" alt="Contact Sync Settings" />
+  </Frame>
+</Card>
+
+<Card>
+  #### Accounts - Company data synchronization - Contact relationship management
+  - Account-level engagement tracking - Core fields supported: - Company Name -
+  Domain - Website URL - Related contacts
+  
+  <Frame>
+    <img src="/platformCaptures/04-account-field-mapping.png" alt="Account Field Mapping" />
+  </Frame>
+</Card>
+
+<Card>
+  #### Opportunities - Pipeline progress tracking - Stage updates - Revenue data
+  sync
+  
+  <Frame>
+    <img src="/platformCaptures/09-opportunity-tracking-setup.png" alt="Opportunity Tracking Setup" />
+  </Frame>
+</Card>
+
+<Callout type="success">
+  **Empower customer success teams to identify opportunities**
+
+Drive growth with synchronized customer data and automated opportunity identification.
+
+</Callout>
+
+#### Features
+
+- Customer data synchronization
+- Product usage tracking
+- Automated opportunity detection
+- Cross-team coordination
+
+#### Benefits
+
+- Proactive opportunity identification
+- Coordinated customer communication
+- Data-driven expansion strategies
+- Enhanced customer experience
+
+## Best Practices
+
+### Data Management
+
+<Callout type="warning">
+  Follow these guidelines to maintain high-quality data across both systems.
+</Callout>
+
+<Frame>
+  <img src="/platformCaptures/06-data-validation-rules.png" alt="Data Validation Rules" />
+</Frame>
+
+- Maintain consistent email formats
+- Standardize company domain naming
+- Keep required fields populated
+- Regular data quality audits
+
+### Process Optimization
+
+<Callout type="info">Optimize your workflows for maximum efficiency.</Callout>
+
+- Configure lead assignment rules
+- Set up automated task creation
+- Utilize custom fields effectively
+- Regular process reviews
+
+### Team Collaboration
+
+<Callout type="info">Ensure smooth cross-team operations.</Callout>
+
+- Define clear ownership rules
+- Standardize status definitions
+- Create shared dashboards
+- Regular sync meetings
+
+## Troubleshooting
+
+### Common Issues
+
+<AccordionGroup>
+  <Accordion title="Salesforce disconnected">
+    Verify your Salesforce connection is active
+  </Accordion>
+  
+  <Accordion title="Leads are not deduplicating">
+    Check your deduplication rules
+  </Accordion>
+
+  <Accordion title="Data is not pushed to correct objects or fields">
+    Review field mappings and ensure they are correctly mapped
+  </Accordion>
+
+  <Accordion title="Data discrepancies">
+    Check your synchronization configuration
+  </Accordion>
+</AccordionGroup>

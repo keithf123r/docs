@@ -1,176 +1,147 @@
 ---
 title: 'Salesforce Integration'
-description: "Complete guide for setting up and using Alice's Salesforce integration"
-icon: "salesforce"
+description: 'Learn how to set up and configure the Salesforce integration with Alice'
 ---
 
-<Card title="Salesforce Integration" horizontal icon="salesforce" color="#019EDB">
-  Alice's Salesforce integration enables bidirectional data flow between
-  platforms, automating key sales and outreach processes while maintaining
-  consistent customer data.
-</Card>
+## Prerequisites
 
-## Getting Started
+Before you begin, ensure you have:
+- An active Salesforce account with administrator access
+- An active Alice account
+- You must be logged into both accounts
 
-### Prerequisites
+## Step-by-Step Setup Guide
 
-Before setting up the Salesforce integration, ensure you have:
+### Step 1: Navigate to Integrations
 
-<CardGroup cols={2}>
-<Card title="Salesforce Account Requirements" icon="computer">
-A Salesforce organization with API access enabled
-  - Administrator or System Integrator role
-  - API access enabled in your Salesforce edition
-</Card>
+1. Log in to your Alice account
+2. Go to Settings
+3. Click on "Integrations" in the settings menu
 
-<Card title="Permission Setup" icon="lock">
-  - Appropriate user permissions configured
-  - API enabled user profile
-  - Required object permissions (Lead, Contact, Account, Opportunity)
-</Card>
-</CardGroup>
-
-### Quick Setup
+### Step 2: Connect Salesforce
 
 <Steps>
-  <Step title="Access Integration Settings">
-    Navigate to Settings > Integrations > CRM in Alice
-    <Frame>
-    <img src="/platformCaptures/01-crm-provider-selection.png" alt="CRM Provider Selection" />
-    </Frame>
+  <Step title="Locate Salesforce Integration">
+    1. In the Integrations page, locate the Salesforce card with the Salesforce logo
+    2. Click on the Salesforce card
   </Step>
-  
-  <Step title="Connect Salesforce">
-    Click "Connect Salesforce" and authorize the connection
-    <Frame>
-    <img src="/platformCaptures/02-crm-authorization.png" alt="Salesforce Authorization" />
-    </Frame>
-  </Step>
-
-  <Step title="Configure Sync Settings">
-    Select the objects and fields you want to sync
-    <Frame>
-    <img src="/platformCaptures/03-field-mapping-configuration.png" alt="Field Mapping Configuration" />
-    </Frame>
+  <Step title="Authorize Connection">
+    1. You'll be redirected to the Salesforce configuration page
+    2. Click "Connect with Salesforce"
+    3. A Salesforce login window will appear (if you're not already logged in)
+    4. Enter your Salesforce credentials and authorize Alice to access your Salesforce account
   </Step>
 </Steps>
 
-## Features
+### Step 3: Configure Data Mapping
 
-### Supported Objects
-
-<Card>
-  #### Leads - Automatic lead creation and updates - Real-time engagement
-  tracking - Lead scoring synchronization
-  
-  <Frame>
-    <img src="/platformCaptures/07-lead-management-config.png" alt="Lead Management Configuration" />
-  </Frame>
-</Card>
-
-<Card>
-  #### Contacts - Bidirectional contact sync - Engagement history tracking -
-  Automatic field updates - Core fields supported: - Email - First Name - Last
-  Name - Title - LinkedIn URL - Custom field mapping
-  
-  <Frame>
-    <img src="/platformCaptures/05-contact-sync-settings.png" alt="Contact Sync Settings" />
-  </Frame>
-</Card>
-
-<Card>
-  #### Accounts - Company data synchronization - Contact relationship management
-  - Account-level engagement tracking - Core fields supported: - Company Name -
-  Domain - Website URL - Related contacts
-  
-  <Frame>
-    <img src="/platformCaptures/04-account-field-mapping.png" alt="Account Field Mapping" />
-  </Frame>
-</Card>
-
-<Card>
-  #### Opportunities - Pipeline progress tracking - Stage updates - Revenue data
-  sync
-  
-  <Frame>
-    <img src="/platformCaptures/09-opportunity-tracking-setup.png" alt="Opportunity Tracking Setup" />
-  </Frame>
-</Card>
-
-<Callout type="success">
-  **Empower customer success teams to identify opportunities**
-
-Drive growth with synchronized customer data and automated opportunity identification.
-
-</Callout>
-
-#### Features
-
-- Customer data synchronization
-- Product usage tracking
-- Automated opportunity detection
-- Cross-team coordination
-
-#### Benefits
-
-- Proactive opportunity identification
-- Coordinated customer communication
-- Data-driven expansion strategies
-- Enhanced customer experience
-
-## Best Practices
-
-### Data Management
-
-<Callout type="warning">
-  Follow these guidelines to maintain high-quality data across both systems.
-</Callout>
-
-<Frame>
-  <img src="/platformCaptures/06-data-validation-rules.png" alt="Data Validation Rules" />
-</Frame>
-
-- Maintain consistent email formats
-- Standardize company domain naming
-- Keep required fields populated
-- Regular data quality audits
-
-### Process Optimization
-
-<Callout type="info">Optimize your workflows for maximum efficiency.</Callout>
-
-- Configure lead assignment rules
-- Set up automated task creation
-- Utilize custom fields effectively
-- Regular process reviews
-
-### Team Collaboration
-
-<Callout type="info">Ensure smooth cross-team operations.</Callout>
-
-- Define clear ownership rules
-- Standardize status definitions
-- Create shared dashboards
-- Regular sync meetings
-
-## Troubleshooting
-
-### Common Issues
+After connecting successfully, you'll need to configure how Alice maps data to your Salesforce:
 
 <AccordionGroup>
-  <Accordion title="Salesforce disconnected">
-    Verify your Salesforce connection is active
-  </Accordion>
-  
-  <Accordion title="Leads are not deduplicating">
-    Check your deduplication rules
-  </Accordion>
+  <Accordion title="Default Field Mappings">
+    The following fields will be automatically mapped:
+    
+    <CardGroup cols={2}>
+      <Card title="Contacts">
+        - Email
+        - First Name
+        - Last Name
+        - Title
+      </Card>
+      <Card title="Leads">
+        - Email
+        - First Name
+        - Last Name
+        - Title
+        - Company
+      </Card>
+      <Card title="Accounts">
+        - Name
+        - Website
+        - Industry
+        - Number of Employees
+      </Card>
+    </CardGroup>
 
-  <Accordion title="Data is not pushed to correct objects or fields">
-    Review field mappings and ensure they are correctly mapped
-  </Accordion>
-
-  <Accordion title="Data discrepancies">
-    Check your synchronization configuration
+    <Info>
+      Additional fields like LinkedIn URL and Twitter URL are also mapped when available
+    </Info>
   </Accordion>
 </AccordionGroup>
+
+### Step 4: Set Up Sourcing Exclusions
+
+<Note>
+  This step is optional but recommended to prevent duplicate outreach
+</Note>
+
+<Steps>
+  <Step title="Access Exclusions">
+    Scroll down to the "Sourcing Exclusions" section
+  </Step>
+  <Step title="Configure Exclusions">
+    Configure which Salesforce records Alice should check before sourcing new prospects:
+
+    <CardGroup cols={2}>
+      <Card title="Leads">
+        Alice will not source prospects that match existing Salesforce leads
+      </Card>
+      <Card title="Contacts">
+        Alice will not source prospects that match existing Salesforce contacts
+      </Card>
+      <Card title="Accounts">
+        Alice will not source prospects from companies that already exist in Salesforce
+      </Card>
+      <Card title="Opportunities">
+        Alice will not source prospects from companies with existing opportunities
+      </Card>
+    </CardGroup>
+  </Step>
+</Steps>
+
+### Step 5: Save Your Configuration
+
+<Steps>
+  <Step title="Review Settings">
+    Double-check all your configured settings
+  </Step>
+  <Step title="Save Changes">
+    1. Click the "Save Config" button at the bottom of the page
+    2. You'll see a confirmation message when your settings are saved successfully
+  </Step>
+</Steps>
+
+### Step 6: Verify Integration
+
+<Check>The Salesforce card in your Integrations page should now show as "Connected"</Check>
+<Check>A green "Complete" badge should appear next to the Mapping section</Check>
+
+## Important Notes
+
+<Warning>
+All data syncing between Alice and Salesforce happens automatically once the integration is set up
+</Warning>
+
+<Info>
+- You can modify your configuration at any time by returning to the Salesforce integration page
+- If you need to update the field mapping, click the edit (pencil) icon next to the Mapping section
+- If you need to disconnect the integration, you can do so from the same integration page
+</Info>
+
+## Support
+
+If you encounter any issues during setup:
+
+<CardGroup cols={3}>
+  <Card title="Check Permissions" icon="lock">
+    Verify you have the necessary permissions in both Alice and Salesforce
+  </Card>
+  <Card title="Edition Support" icon="building">
+    Ensure you're using a supported Salesforce edition
+  </Card>
+  <Card title="Get Help" icon="headset">
+    Contact Alice support if you need additional assistance
+  </Card>
+</CardGroup>
+
+This completes your Salesforce integration setup with Alice. The integration will now automatically sync relevant data between the two platforms according to your configured settings.

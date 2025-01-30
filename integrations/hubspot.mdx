@@ -1,0 +1,120 @@
+---
+title: 'HubSpot Integration'
+description: 'Learn how to set up and configure the HubSpot integration with Alice'
+---
+
+## Prerequisites
+
+Before you begin, ensure you have:
+- An active Alice account
+- Admin access to your organization's HubSpot account
+
+## Step-by-Step Setup Guide
+
+### Step 1: Navigate to Integrations
+
+1. Log in to your Alice account
+2. Go to Settings
+3. Click on "Integrations"
+
+### Step 2: Connect HubSpot
+
+1. In the Integrations page, locate the HubSpot card
+2. Click on the HubSpot integration card
+3. You'll be prompted to authorize the connection between Alice and HubSpot
+4. Click "Install" to begin the authorization process
+5. Follow the HubSpot login prompts if you're not already logged in
+6. Grant the necessary permissions when prompted
+
+### Step 3: Configure Data Mapping
+
+After successful installation, you'll be automatically redirected to the HubSpot integration settings page where you can configure:
+
+<AccordionGroup>
+  <Accordion title="Data Mapping Configuration">
+    - This section shows how Alice's data fields map to your HubSpot fields
+    - The default mapping is set up automatically
+    - To modify the mapping:
+      1. Click the edit (pencil) icon in the Mapping section
+      2. Adjust the field mappings as needed
+      3. Click "Save" to apply your changes
+  </Accordion>
+</AccordionGroup>
+
+### Step 4: Configure Sourcing Exclusions
+
+This helps prevent duplicate outreach by setting rules for which prospects Alice should not source:
+
+<CardGroup cols={2}>
+  <Card title="Contact Exclusions">
+    - Enable/disable contact matching
+    - Alice will not source prospects that have matching emails with existing HubSpot Contacts
+  </Card>
+  <Card title="Company Exclusions">
+    - Enable/disable company matching
+    - Alice will not source contacts from companies that already exist in HubSpot
+  </Card>
+  <Card title="Deal Exclusions">
+    - Enable/disable deal matching
+    - Alice will not source companies that already have deals in HubSpot
+  </Card>
+</CardGroup>
+
+### Step 5: Configure CRM Push Settings
+
+Set up when and how Alice should update HubSpot:
+
+<Steps>
+  <Step title="Select Trigger Events">
+    Choose which events should trigger updates in HubSpot:
+    - Lead Sourced
+    - First Email Sent
+    - Follow-up Email Sent
+    - Positive Reply
+    - Negative Reply
+  </Step>
+  <Step title="Configure Event Actions">
+    For each event, you can:
+    - Enable/disable the sync
+    - Choose which HubSpot entities to update (Contacts, Companies, Emails)
+  </Step>
+</Steps>
+
+### Step 6: Verify Integration
+
+<Check>The integration status should show as "Complete" with a green indicator</Check>
+
+You can test the integration by:
+1. Creating a new campaign in Alice
+2. Verifying that the data appears in HubSpot as configured
+
+## Important Notes
+
+<Warning>
+All changes in the configuration are saved automatically. Make sure to review your settings carefully before saving.
+</Warning>
+
+<Info>
+- You can modify these settings at any time by returning to the HubSpot integration page
+- If you need to disconnect the integration, use the edit button in the Mapping section and click "Uninstall"
+- For any technical issues, contact Alice support
+</Info>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Start with Defaults" icon="sliders">
+    Begin with the default mapping configuration before making customizations
+  </Card>
+  <Card title="Prevent Duplicates" icon="copy">
+    Enable sourcing exclusions to prevent duplicate outreach
+  </Card>
+  <Card title="Configure Workflow" icon="gear">
+    Configure push settings based on your team's workflow needs
+  </Card>
+  <Card title="Regular Verification" icon="check-double">
+    Regularly verify that data is syncing correctly between Alice and HubSpot
+  </Card>
+</CardGroup>
+
+This completes your HubSpot integration setup with Alice. The integration will now automatically sync data between the two platforms according to your configuration.
